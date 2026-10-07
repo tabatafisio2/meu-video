@@ -1,7 +1,10 @@
 import {
   AbsoluteFill,
+  Audio,
+  Sequence,
   interpolate,
   spring,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -132,6 +135,19 @@ export const MyComposition: React.FC = () => {
         opacity: fadeOut,
       }}
     >
+      {LINES.map((line, i) => {
+        const lineStart = START + i * STAGGER;
+        return (
+          <Sequence key={`sfx-${i}`} from={lineStart} layout="none">
+            <Audio src={staticFile("sfx/whoosh.wav")} volume={0.35} />
+            {line.some((w) => w.strong) ? (
+              <Sequence from={4} layout="none">
+                <Audio src={staticFile("sfx/impact.wav")} volume={0.9} />
+              </Sequence>
+            ) : null}
+          </Sequence>
+        );
+      })}
       <div
         style={{
           display: "flex",
