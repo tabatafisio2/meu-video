@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tábata Guimarães</title>
+<meta name="description" content="Fisioterapeuta especialista em recuperação pós-parto, diástase abdominal e tratamento de cicatrizes de cesárea.">
+<meta property="og:title" content="Tábata Guimarães · Fisioterapeuta">
+<meta property="og:description" content="Recuperação pós-parto, diástase abdominal e cicatrizes de cesárea.">
+<meta property="og:image" content="https://tabataguimaraes.com.br/toque-aqui/tabata-capa.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+  /* Layout: coluna única pensada para celular; foto em destaque à direita com o nome sobreposto à esquerda, seguida de cards-banner escuros com imagem. */
+  :root {
+    --paper: #F7F0E9;
+    --sand: #EBDDD0;
+    --nude: #C7A58C;
+    --rose: #B07F6C;
+    --cocoa: #4B3327;
+    --espresso: #2A1C15;
+    --ink: #33241C;
+    --muted: #806656;
+    --line: rgba(75, 51, 39, .16);
+    --display: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+    --body: "Jost", "Helvetica Neue", Arial, sans-serif;
+    --script: "Pinyon Script", "Snell Roundhand", cursive;
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--sand);
+    color: var(--ink);
+    font-family: var(--body);
+    font-weight: 300;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  a:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 14px; }
+
+  .page {
+    max-width: 480px;
+    margin: 0 auto;
+    background: var(--paper);
+    min-height: 100%;
+    box-shadow: 0 0 60px rgba(42, 28, 21, .08);
+  }
+
+  /* ---------- Placeholders de foto (substituir pelas fotos reais) ---------- */
+  .ph {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    overflow: hidden;
+  }
+  .ph svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .ph-label {
+    position: relative;
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 999px;
+    background: rgba(255,255,255,.55); color: var(--cocoa);
+    backdrop-filter: blur(4px);
+  }
+  .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero-photo { object-position: 50% 0%; }
+
+  /* ---------- Topo ---------- */
+  .hero {
+    position: relative;
+    min-height: 640px;
+    display: flex; align-items: flex-end;
+    overflow: hidden;
+    background: linear-gradient(160deg, #F3E7DC 0%, #E7D3C2 100%);
+  }
+  .hero-media {
+    position: absolute; top: 0; right: 0; bottom: 0;
+    width: 100%;
+  }
+  .hero-media .ph { background: linear-gradient(170deg, #DCC3AE 0%, #C9A88F 55%, #B38E74 100%); }
+  .hero-media::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(0deg, #F7F0E9 0%, rgba(247,240,233,.96) 24%, rgba(247,240,233,.6) 40%, rgba(247,240,233,0) 58%);
+    pointer-events: none;
+  }
+  .hero-script {
+    position: absolute; left: 18px; top: 34px;
+    font-family: var(--script); font-size: 88px; line-height: 1;
+    color: rgba(176, 127, 108, .16);
+    transform: rotate(-8deg);
+    pointer-events: none;
+  }
+  .hero-text {
+    position: relative; z-index: 1;
+    padding: 0 22px 28px;
+    width: 100%;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .eyebrow {
+    font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--muted); font-weight: 400;
+  }
+  .name {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(42px, 12.5vw, 56px);
+    line-height: .92;
+    color: var(--espresso);
+    letter-spacing: -.01em;
+  }
+  .name em { display: block; font-style: italic; color: var(--rose); }
+  .role {
+    font-size: 13.5px; line-height: 1.5; color: var(--cocoa);
+    text-wrap: balance;
+  }
+  .role strong { font-weight: 500; }
+
+  /* ---------- Apresentação ---------- */
+  .intro {
+    padding: 26px 22px 34px;
+    display: flex; flex-direction: column; gap: 20px; align-items: flex-start;
+  }
+  .intro p {
+    font-family: var(--display);
+    font-size: 21px; line-height: 1.4;
+    color: var(--ink);
+  }
+  .intro p em { color: var(--rose); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 13px 22px;
+    border-radius: 999px;
+    background: var(--cocoa); color: var(--paper);
+    text-decoration: none;
+    font-size: 13px; letter-spacing: .08em; font-weight: 400;
+    transition: background .2s ease;
+  }
+  .btn:hover { background: var(--espresso); }
+  .btn svg { width: 15px; height: 15px; }
+
+  .divider {
+    display: flex; align-items: center; gap: 14px;
+    padding: 0 22px; color: var(--nude);
+  }
+  .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .divider svg { width: 12px; height: 12px; }
+
+  /* ---------- Atendimentos ---------- */
+  .services { padding: 30px 16px 40px; display: flex; flex-direction: column; gap: 14px; }
+  .services h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: 34px; line-height: 1.05; color: var(--espresso);
+    padding: 0 6px 6px;
+    text-wrap: balance;
+  }
+  .services h2 em { color: var(--rose); }
+
+  .card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    min-height: 186px;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #F4E9DF;
+    background: var(--espresso);
+    box-shadow: 0 10px 24px -14px rgba(42, 28, 21, .55);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -14px rgba(42, 28, 21, .6); }
+  .card-media { position: relative; }
+  .card-media::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(42,28,21,0) 55%, rgba(42,28,21,.85) 100%);
+    pointer-events: none;
+  }
+  .card-body {
+    padding: 18px 16px 16px 14px;
+    display: flex; flex-direction: column; gap: 7px;
+  }
+  .card .tag {
+    font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--nude); font-weight: 400;
+  }
+  .card h3 {
+    font-family: var(--display); font-weight: 400;
+    font-size: 25px; line-height: 1.02; color: #FBF4EE;
+    text-wrap: balance;
+  }
+  .card h3 em { color: #E2C3AE; }
+  .card p { font-size: 12.5px; line-height: 1.45; color: rgba(244, 233, 223, .78); }
+  .card .cta {
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid rgba(226, 195, 174, .45);
+    border-radius: 999px;
+    font-size: 11.5px; letter-spacing: .04em; color: #F4E9DF; white-space: nowrap;
+    transition: background .2s ease, border-color .2s ease;
+  }
+  .card:hover .cta { background: rgba(226, 195, 174, .14); border-color: rgba(226, 195, 174, .8); }
+  .cta svg { width: 13px; height: 13px; }
+
+  .card.c1 { background: linear-gradient(120deg, #3A271E 0%, #2A1C15 100%); }
+  .card.c2 { background: linear-gradient(120deg, #5A4033 0%, #3B291F 100%); }
+  .card.c3 { background: linear-gradient(120deg, #2A1C15 0%, #1E140F 100%); }
+  .card.c4 { background: linear-gradient(120deg, #7A5948 0%, #533A2D 100%); }
+  .c1 .ph { background: linear-gradient(160deg, #E9D6C6, #C9A68D); }
+  .c2 .ph { background: linear-gradient(160deg, #D9BFA9, #A88168); }
+  .c3 .ph { background: linear-gradient(160deg, #CDB09A, #8E6A55); }
+  .c4 .ph { background: linear-gradient(160deg, #EADBCC, #BE9C84); }
+
+  /* ---------- Rodapé ---------- */
+  footer {
+    background: var(--espresso);
+    color: rgba(244, 233, 223, .78);
+    padding: 34px 22px 30px;
+    display: flex; flex-direction: column; gap: 18px;
+    position: relative; overflow: hidden;
+  }
+  .foot-name { font-family: var(--display); font-size: 26px; color: #FBF4EE; line-height: 1.1; }
+  .foot-role { font-size: 12.5px; letter-spacing: .04em; }
+  .foot-contact {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 0; border-top: 1px solid rgba(244,233,223,.12); border-bottom: 1px solid rgba(244,233,223,.12);
+    text-decoration: none;
+  }
+  .foot-contact .icon {
+    width: 36px; height: 36px; border-radius: 50%;
+    display: grid; place-items: center;
+    border: 1px solid rgba(226,195,174,.4); color: #E2C3AE; flex: none;
+  }
+  .foot-contact .icon svg { width: 17px; height: 17px; }
+  .foot-contact small { display: block; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--nude); }
+  .foot-contact span { font-size: 15px; color: #FBF4EE; font-variant-numeric: tabular-nums; }
+  .signature {
+    position: absolute; right: 14px; bottom: 6px;
+    font-family: var(--script); font-size: 52px; line-height: 1;
+    color: rgba(226, 195, 174, .22);
+    pointer-events: none;
+  }
+  .copy { font-size: 10.5px; color: rgba(244,233,223,.45); }
+
+  @media (min-width: 481px) {
+    body { padding: 28px 0; }
+    .page { border-radius: 28px; overflow: hidden; }
+  }
+  @media (max-width: 360px) {
+    .card { grid-template-columns: 34% 1fr; }
+    .card h3 { font-size: 22px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- ============ TOPO ============ -->
+  <header class="hero">
+    <div class="hero-media">
+      <img class="photo hero-photo" src="/toque-aqui/tabata-capa.jpg" alt="Tábata Guimarães, fisioterapeuta" width="900" height="1350">
+    </div>
+        <div class="hero-text">
+      <span class="eyebrow">Fisioterapia feminina</span>
+      <h1 class="name">Tábata <em>Guimarães</em></h1>
+      <p class="role">Fisioterapeuta especialista em <strong>recuperação pós-parto</strong>, diástase abdominal e cicatrizes de cesárea.</p>
+    </div>
+  </header>
+
+  <section class="intro">
+    <p>Minha missão é mostrar a cada mãe que a maternidade não precisa significar abrir mão do próprio corpo. É possível recuperar <em>a força, a segurança e a confiança</em> para viver essa nova fase com mais liberdade.</p>
+    <a class="btn" href="#atendimentos">Conheça meus atendimentos
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <div class="divider" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 0c.6 3.4 2.6 5.4 6 6-3.4.6-5.4 2.6-6 6-.6-3.4-2.6-5.4-6-6 3.4-.6 5.4-2.6 6-6z" fill="currentColor"/></svg></div>
+
+  <!-- ============ ATENDIMENTOS ============ -->
+  <section class="services" id="atendimentos">
+    <h2>Meus programas <em>e atendimentos</em></h2>
+
+    <!-- Card 1 -->
+    <a class="card c1" href="https://cesarea.tabataguimaraes.com.br" target="_blank" rel="noopener">
+      <div class="card-media">
+        <img class="photo" src="/toque-aqui/card-cesarea.jpg" alt="" style="object-position:50% 40%">
+      </div>
+      <div class="card-body">
+        <span class="tag">Programa</span>
+        <h3>Cesárea <em>Sem Limitações</em></h3>
+        <p>Tratamento para todo tipo de cicatriz de cesárea: aberta, com queloide, hipertrófica ou inflamada.</p>
+        <span class="cta">Conhecer o programa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a class="card c2" href="https://meucorpodevolta.com.br" target="_blank" rel="noopener">
+      <div class="card-media">
+        <img class="photo" src="/toque-aqui/card-diastase.jpg" alt="" style="object-position:50% 40%">
+      </div>
+      <div class="card-body">
+        <span class="tag">Programa · Meu Corpo de Volta</span>
+        <h3>Diástase <em>e barriga</em></h3>
+        <p>Orientação e exercícios para tratar a diástase abdominal, cuidar da barriga e ajudar a reduzir medidas.</p>
+        <span class="cta">Conhecer o programa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a class="card c3" href="https://pay.hotmart.com/T93017584F?checkoutMode=10&amp;bid=1757099384259" target="_blank" rel="noopener">
+      <div class="card-media">
+        <img class="photo" src="/toque-aqui/card-vip.jpg" alt="" style="object-position:45% 10%">
+      </div>
+      <div class="card-body">
+        <span class="tag">Individual · 3 meses</span>
+        <h3>Acompanhamento <em>VIP</em></h3>
+        <p>Três meses de acompanhamento personalizado comigo, com meu contato pessoal e chamadas de vídeo.</p>
+        <span class="cta">Saiba mais sobre o VIP <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 4 -->
+    <a class="card c4" href="https://wa.me/5592982689753" target="_blank" rel="noopener">
+      <div class="card-media">
+        <img class="photo" src="/toque-aqui/card-visita.jpg" alt="" style="object-position:48% 45%">
+      </div>
+      <div class="card-body">
+        <span class="tag">Na sua casa · Manaus</span>
+        <h3>Atendimento <em>presencial</em></h3>
+        <p>Vou até a sua casa, em Manaus. Fale com a secretária para saber sobre avaliação, horários e agendamento.</p>
+        <span class="cta">Agendar pelo WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+  </section>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer>
+    <div>
+      <div class="foot-name">Tábata Guimarães</div>
+      <div class="foot-role">Fisioterapeuta pós-cesárea</div>
+    </div>
+    <div class="copy">© 2026 Tábata Guimarães · Todos os direitos reservados</div>
+    <div class="signature" aria-hidden="true">Tábata</div>
+  </footer>
+
+</main>
+</body>
+</html>
